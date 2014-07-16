@@ -1,7 +1,14 @@
 #ifndef _client_h_
 #define _client_h_
 
+<<<<<<< Updated upstream
 #include <common/types.h>
+=======
+
+#include "types.h"
+#include "controlEvent.h"
+
+>>>>>>> Stashed changes
 
 namespace boring
 {
@@ -14,13 +21,13 @@ public:
 
     virtual void start() = 0;
 
-    virtual const ControlMessage& processMessage( ControlMessage& receivedMsg ) = 0;
+    virtual const ControlEvent& processMessage( ControlEvent& receivedMsg ) = 0;
 
     virtual void exit() = 0;
 
-    ControlEvent getRegisteEvent( ) const;
+    virtual ControlEvent getRegisteEvent( ) const;
 
-    ControlEvent getRegisterEventsEvent( uint32_t eventID ) const;
+    virtual ControlEvent getRegisterEventsEvent( ) const;
 
     bool registered( ) const { return isRegistred_; }
 
