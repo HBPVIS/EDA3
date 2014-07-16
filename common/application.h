@@ -1,24 +1,31 @@
 #ifndef _application_h_
 #define _application_h_
 
+#include "types.h"
+
 namespace boring
 {
 
 class Application
 {
 public:
-    Application( Processor& processor, MessageProcessor& messageProcessor )
-        : processor_( processor ), messageProcessor_( messageProcessor )
+    Application( Client& processor,
+                 MessageTransmitter& messageTransmitter )
+        : processor_( processor ),
+          messageProcessor_( messageProcessor ),
+          exitRequested_( false )
     {
     }
 
     ~Application()
     {
-        exit();
+        thread_.join();
     }
 
     void start()
     {
+        eventTransmitter_.start();
+        client_.start();
         thread_ = boost::thread( &loop_, this );
         thread_.start_thread();
     }
@@ -26,9 +33,8 @@ public:
     void exit()
     {
         exitRequested_ = true;
-        messageProcessor_.exit();
-        processor_.exit();
-        thread_.join();
+        eventTransmitter_.exit();
+        client_.exit();
     }
 
 private:
@@ -37,14 +43,14 @@ private:
     {
         while( !exitRequested )
         {
-            ControlMessage receivedMsg = messageProcessor_.receiveControlMessage();
-            const ControlMessage& msg = processor_.processMessage( receivedMsg );
-            messageProcessor_.sendControlMessage( msg );
+            const ControlEvent& receivedMsg = eventTransmitter_.receiveControlEvent();
+            const ControlEvent& msg = client_.processControlEvent( receivedMsg );
+            eventTransmitter_.sendControlEvent( msg );
         }
     }
 
-    Processor& processor_;
-    MessageProcessor& messageProcessor_;
+    Client& client_;
+    EventTransmitter& eventTransmitter_;
     boost::thread thread_;
     bool exitRequested_;
 };
