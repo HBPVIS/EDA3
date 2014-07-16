@@ -1,7 +1,12 @@
 #ifndef CONNECTION_23213_H
 #define CONNECTION_23213_H
 
+#include <types.h>
+
 #include <string>
+
+namespace boring
+{
 
 class Connection
 {
@@ -15,5 +20,7 @@ private:
 	std::string m_IP;
 	short m_Port;
 };
+
+}
 
 #endif
