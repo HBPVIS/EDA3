@@ -2,6 +2,9 @@
 
 #include <sstream>
 
+namespace boring
+{
+
 const short Connection::GetPort() const
 {
 	return m_Port;
@@ -26,3 +29,4 @@ const std::string Connection::GetAsUniqueString() const
 	return ss.str().c_str();
 }
 
+}

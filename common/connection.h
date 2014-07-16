@@ -1,5 +1,5 @@
-#ifndef CONNECTION_23213_H
-#define CONNECTION_23213_H
+#ifndef _connection_h_
+#define _connection_h_
 
 #include <types.h>
 
@@ -23,4 +23,4 @@ private:
 
 }
 
-#endif
+#endif // _connection_h_

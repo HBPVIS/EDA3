@@ -1,5 +1,5 @@
-#ifndef _controlevent_h_
-#define _controlevent_h_
+#ifndef _controlEvent_h_
+#define _controlEvent_h_
 
 #include <types.h>
 
@@ -58,4 +58,4 @@ class ControlEvent
 
 }
 
-#endif // _controlevent_h_
+#endif // _controlEvent_h_
