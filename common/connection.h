@@ -6,8 +6,9 @@
 class Connection
 {
 public:
-	const std::string& GetIP() const;
+	Connection(const std::string& ip, const short port);
 
+	const std::string& GetIP() const;
 	const short GetPort() const;
 
 private:

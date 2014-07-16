@@ -7,8 +7,8 @@
 class ClientProxy
 {
 public:
+	ClientProxy(const Connection& controlConnection, const Connection& dataConnection);
 	const Connection& GetControlConnection() const;
-
 	const Connection& GetDataConnection() const;
 private:
 	Connection m_ControlConnection; //holding ip and port for control events
