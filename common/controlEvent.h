@@ -2,6 +2,7 @@
 #define _controlEvent_h_
 
 #include <types.h>
+#include <vector>
 
 namespace boring 
 {
