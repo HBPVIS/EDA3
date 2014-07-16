@@ -1,18 +1,17 @@
-#ifndef _type_h_
-#define _type_h_
+#ifndef _types_h_
+#define _types_h_
 
 namespace broing
 {
 
 class Application;
-class Processor;
 class ClientProxy;
 class Connection;
 class ControlEvent;
 class Broker;
-class Client.h;
-class MessageTransmiter.h;
+class Client;
+class EventTransmitter;
 
 }
 
-#endif // _type_h_
+#endif // _types_h_
