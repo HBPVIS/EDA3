@@ -1,6 +1,3 @@
-
-
-
 #ifndef _controlevent_h_
 #define _controlevent_h_
 
