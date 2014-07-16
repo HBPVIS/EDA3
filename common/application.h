@@ -2,6 +2,7 @@
 #define _application_h_
 
 #include "types.h"
+#include <boost/thread/thread.hpp>
 
 namespace boring
 {
