@@ -1,7 +1,7 @@
 #ifndef _types_h_
 #define _types_h_
 
-namespace broing
+namespace boring
 {
 
 class Application;
