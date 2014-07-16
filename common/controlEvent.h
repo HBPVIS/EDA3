@@ -22,17 +22,17 @@ class ControlEvent
 
   size_t & UUID() 
   { 
-    return _UUID;
+    return UUID_;
   }
 
   size_t & eventId() 
   { 
-    return _eventId;
+    return eventId_;
   }
 
   bool & ack() 
   { 
-    return _ack;
+    return ack_;
   }
 
   std::vector<byte> & data() 
