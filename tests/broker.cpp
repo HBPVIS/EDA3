@@ -12,15 +12,16 @@ public:
            switch( receivedMsg.getEvenId() )
            {
                 case boring::REGISTER_CLIENT:
-                    proxyList_.
+                    proxyList_.addClient( clientProxy );
 
                 case boring::REGISTER_EVENTS:
-            eventClientMap_
+                    eventClientMap_.registerEvents( eventList, clientProxy  );
            }
        }
 
        void exit()
        {
+           // hello lets exit
        }
 
 
@@ -28,7 +29,12 @@ public:
     std::map< uint32_t eventId, ClientProxList > eventClientMap_;
 };
 
+
 int main()
 {
-	return 0;
+    Broker broker;
+    ZeroMQConnection connection;
+    Application application( broker, connection );
+    application.start();
+    return 0;
 }
