@@ -2,17 +2,16 @@
 #define _connection_h_
 
 #include <types.h>
-
+#include <eventTransmitter.h>
 #include <string>
 
 namespace boring
 {
 
-class Connection
+class Connection : public EventTransmitter
 {
 public:
-	Connection(const std::string& ip, const short port);
-
+    Connection( const std::string& ip, const short port );
 	const std::string& GetIP() const;
 	const short GetPort() const;
 	const std::string GetAsUniqueString() const;

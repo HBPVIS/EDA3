@@ -18,6 +18,19 @@ public:
 
     virtual void exit() = 0;
 
+    ControlEvent getRegisteEvent( ) const;
+
+    ControlEvent getRegisterEventsEvent( uint32_t eventID ) const;
+
+    bool registered( ) const { return isRegistred_; }
+
+    bool eventsRegistered( ) const { return eventsRegistered_; }
+
+protected:
+
+    bool registered_;
+    bool eventsRegistered_;
+
 };
 
 

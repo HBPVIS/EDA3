@@ -11,7 +11,6 @@ class ControlEvent;
 class Broker;
 class Client;
 class EventTransmitter;
-
 }
 
 #endif // _types_h_
