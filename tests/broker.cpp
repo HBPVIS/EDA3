@@ -9,14 +9,23 @@ public:
 
        const boring::ControlMessage& processMessage( boring::ControlMessage& receivedMsg )
        {
+           boring::ControlMessage msg;
            switch( receivedMsg.getEvenId() )
            {
                 case boring::REGISTER_CLIENT:
                     proxyList_.addClient( clientProxy );
-
+                    msg.ack( true );
+                    break;
                 case boring::REGISTER_EVENTS:
                     eventClientMap_.registerEvents( eventList, clientProxy  );
+                    msg.ack( true );
+                    break;
+
+                case boring::OTHER_EVENTS:
+                    msg = doSomething( msg );
+                    break;
            }
+           return msg;
        }
 
        void exit()
