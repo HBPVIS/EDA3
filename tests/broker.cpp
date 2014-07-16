@@ -34,7 +34,7 @@ public:
 
 
     ClientProxList proxyList_;
-    std::map< uint32_t eventId, ClientProxList > eventClientMap_;
+    std::map< uint32_t, ClientProxList > eventClientMap_;
 };
 
 
