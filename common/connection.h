@@ -10,7 +10,7 @@ public:
 
 	const std::string& GetIP() const;
 	const short GetPort() const;
-
+	const std::string GetAsUniqueString() const;
 private:
 	std::string m_IP;
 	short m_Port;
