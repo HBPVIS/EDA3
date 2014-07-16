@@ -9,8 +9,8 @@ class ClientProxy;
 class Connection;
 class ControlEvent;
 class Broker;
-class Client.h;
-class MessageTransmiter.h;
+class Client;
+class EventTransmitter;
 
 }
 
