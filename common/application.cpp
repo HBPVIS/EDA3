@@ -35,9 +35,6 @@ void Application::exit()
 
 void Application::loop_( )
 {
-
-
-
     while( !exitRequested )
     {
         if( !client_.registered() )
