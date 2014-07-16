@@ -1,5 +1,8 @@
 #include "clientProxy.h"
 
+namespace boring
+{
+
 const Connection& ClientProxy::GetDataConnection() const
 {
 	return m_DataConnection;
@@ -17,3 +20,4 @@ ClientProxy::ClientProxy(const Connection& controlConnection, const Connection& 
 	;
 }
 
+}

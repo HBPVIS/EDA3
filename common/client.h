@@ -1,6 +1,8 @@
 #ifndef _client_h_
 #define _client_h_
 
+#include <types.h>
+
 namespace boring
 {
 

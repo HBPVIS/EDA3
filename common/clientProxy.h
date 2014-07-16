@@ -1,8 +1,10 @@
-#ifndef CLIENTPROXY_23114_H
-#define CLIENTPROXY_23114_H
+#ifndef _clientProxy_h_
+#define _clientProxy_h_
 
+#include <types.h> 
 
-#include "connection.h"
+namespace boring
+{
 
 class ClientProxy
 {
@@ -15,4 +17,6 @@ private:
 	Connection m_DataConnection; //same as above but for bulk data
 };
 
-#endif
+}
+
+#endif // _clientProxy_h_
