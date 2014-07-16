@@ -22,6 +22,15 @@ class ControlEvent
         eventId_( NO_OPERATION ),
         ack_( false )
   {}
+
+  ControlEvent( uint32_t UUID, uint32_t eventID, bool ack
+                std::vector<int8_t>& data )
+      : uuid_( UUID ),
+        eventId_( eventID ),
+        ack_( ack )
+        data_(data)
+  {
+  }
    
   ~ControlEvent()
   {}

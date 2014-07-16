@@ -1,14 +1,8 @@
 #ifndef _client_h_
 #define _client_h_
 
-<<<<<<< Updated upstream
-#include <common/types.h>
-=======
-
 #include "types.h"
 #include "controlEvent.h"
-
->>>>>>> Stashed changes
 
 namespace boring
 {
@@ -33,10 +27,13 @@ public:
 
     bool eventsRegistered( ) const { return eventsRegistered_; }
 
+    const uint32_t getClientUUID() const;
+
 protected:
 
     bool registered_;
     bool eventsRegistered_;
+    ClientProxy clientProxy_;
 
 };
 
