@@ -35,7 +35,10 @@ class ControlEvent
     return _ack;
   }
 
-
+  std::vector<byte> & data() 
+  {
+    return data_
+  }
 
 
  private:
@@ -50,7 +53,7 @@ class ControlEvent
   bool ack_;
 
   //! Message data
-  char *data_;
+  std::vector<byte> data_; 
 
 }
 
