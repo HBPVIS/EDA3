@@ -9,8 +9,7 @@ namespace boring
 class ControlEvent
 {
 
-
-  ControlEVent() 
+  ControlEvent() 
   {
   }
    
