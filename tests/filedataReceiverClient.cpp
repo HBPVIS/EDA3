@@ -1,3 +1,4 @@
+#include "../common/client.h"
 class FileDataReceiverClient : public boring::Client
 {
     void start()

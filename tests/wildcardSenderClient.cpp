@@ -1,3 +1,5 @@
+#include "../common/client.h"
+
 class WildCardSenderClient: public boring::Client
 {
     void start()

@@ -1,3 +1,5 @@
+#include "../common/client.h"
+
 class FileNameListGeneratorClient : public boring::Client
 {
     void start()
