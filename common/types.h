@@ -1,5 +1,7 @@
 #ifndef _types_h_
-#define _types_h_
+#define _types_h
+
+typedef unsigned char byte;
 
 namespace boring
 {
