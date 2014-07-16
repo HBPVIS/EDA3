@@ -20,9 +20,8 @@ public:
                     eventClientMap_.registerEvents( eventList, clientProxy  );
                     msg.ack( true );
                     break;
-
                 case boring::OTHER_EVENTS:
-                    msg = doSomething( msg );
+                    msg = doSomething( receivedMsg );
                     break;
            }
            return msg;
