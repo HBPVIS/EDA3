@@ -4,25 +4,17 @@
 namespace boring
 {
 
-class Client 
+class Client
 {
 public:
-    Client()
-    {
-    }
 
-    ~Client()
-    {
-    }
+   ~Client(){}
 
-    const ControlMessage& processMessage( ControlMessage& receivedMsg )
-    {
-	// do stuff
-    }
+    virtual void start() = 0;
 
-    void exit()
-    {
-    }
+    virtual const ControlMessage& processMessage( ControlMessage& receivedMsg ) = 0;
+
+    virtual void exit() = 0;
 
 };
 
